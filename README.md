@@ -1,6 +1,6 @@
 # Trybe exercises
 
-Exercises from the Web Development Course from Trybe.
+Exercises from the Web Development Course at Trybe.
 
 Trybe is a web development school that has a genuine commitment to the
 professional success of its students. With the Shared Success Model, those who study
