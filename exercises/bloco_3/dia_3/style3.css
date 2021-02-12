@@ -1,0 +1,20 @@
+h1,
+p {
+  text-align: center;
+}
+
+ol li:hover {
+  background-color: red;
+  font-weight: bolder;
+  color: white;
+}
+
+li:active {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+ol,
+ul {
+  list-style: none;
+}
