@@ -30,3 +30,11 @@ li {
 li em {
   font-weight: bolder;
 }
+
+.li-blue {
+  color: blue;
+}
+
+.java-text {
+  background-color: pink;
+}
