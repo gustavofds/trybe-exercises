@@ -22,3 +22,11 @@ h3 em {
   font-size: 40px;
   border: 1px black solid;
 }
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: bolder;
+}
