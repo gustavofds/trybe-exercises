@@ -38,3 +38,27 @@ li em {
 .java-text {
   background-color: pink;
 }
+
+ul.aliados li:hover {
+  font-weight: bolder;
+}
+
+#stack a:hover {
+  color: orange;
+}
+
+#wschools a:hover {
+  color: greenyellow;
+}
+
+#mdn a:hover {
+  color: black;
+}
+
+#dev-docs a:hover {
+  color: yellow;
+}
+
+#trybe a:hover {
+  color: green;
+}
