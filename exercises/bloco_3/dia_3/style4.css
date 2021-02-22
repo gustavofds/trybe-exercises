@@ -1,0 +1,52 @@
+div {
+  padding: 1px;
+}
+
+div:hover {
+  border-style: solid;
+}
+
+div:nth-of-type(1) {
+  background-color: #118ab2;
+}
+
+div:nth-of-type(2) {
+  background-color: #ef476f;
+}
+div:nth-of-type(3) {
+  background-color: #06d6a0;
+  padding: 50px 0;
+}
+div:nth-of-type(4) {
+  background-color: #073b4c;
+}
+div:nth-of-type(5) {
+  background-color: #ffd166;
+}
+
+div:nth-of-type(1) h3 {
+  color: white;
+  font-size: 35px;
+}
+
+div:nth-of-type(2) h3 {
+  color: white;
+  font-size: 30px;
+}
+
+div:nth-of-type(3) h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+div:nth-of-type(4) h3 {
+  color: white;
+}
+div:nth-of-type(5) h3 {
+  color: white;
+}
+
+div:nth-of-type(2n + 1) h3 {
+  font-style: italic;
+  color: red;
+}

@@ -1,0 +1,64 @@
+ol li {
+  background-color: yellow;
+}
+
+ol li:nth-child(2n) {
+  color: green;
+}
+
+.primo {
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  color: red;
+}
+
+h1 em,
+h2 em,
+h3 em {
+  font-size: 40px;
+  border: 1px black solid;
+}
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: bolder;
+}
+
+.li-blue {
+  color: blue;
+}
+
+.java-text {
+  background-color: pink;
+}
+
+ul.aliados li:hover {
+  font-weight: bolder;
+}
+
+#stack a:hover {
+  color: orange;
+}
+
+#wschools a:hover {
+  color: greenyellow;
+}
+
+#mdn a:hover {
+  color: black;
+}
+
+#dev-docs a:hover {
+  color: yellow;
+}
+
+#trybe a:hover {
+  color: green;
+}
