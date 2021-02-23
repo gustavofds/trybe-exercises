@@ -38,6 +38,10 @@ header nav li:hover {
   color: #9b5de5;
 }
 
+main {
+  margin: 20px 200px;
+}
+
 footer {
   background-color: #00f5d4;
 }
