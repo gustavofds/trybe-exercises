@@ -1,0 +1,91 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  /* box-sizing retirado do projeto da aula ao vivo 3.4 - Porém estudado e compreendido */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fee440;
+}
+
+.main-header {
+  height: 90ox;
+  background-color: #00f5d4;
+}
+
+#img-1 {
+  margin-top: 40px;
+}
+
+header h1 {
+  padding-top: 15px;
+  padding-left: 15px;
+  color: #003049;
+}
+
+.nav-list {
+  padding: 0;
+  background-color: #00bbf9;
+  padding: 5px;
+  padding-left: 15px;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+header nav li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header nav li:hover {
+  color: #9b5de5;
+}
+
+main {
+  margin: 20px 200px;
+}
+
+article {
+  margin-top: 40px;
+}
+
+.general-information {
+  display: inline-block;
+  width: 70%;
+  margin-top: 40px;
+  float: right;
+}
+
+table {
+  margin-top: 10px;
+}
+
+.facts {
+  display: inline-block;
+  width: 80%;
+}
+
+aside {
+  display: inline-block;
+  width: 15%;
+  float: right;
+  margin-top: 50px;
+  padding: 5px;
+  background-color: bisque;
+  border-radius: 5%;
+}
+
+h2 {
+  text-align: center;
+}
+
+#referencias {
+  margin: 20px 200px;
+}
+
+footer {
+  background-color: #00f5d4;
+  margin-top: 40px;
+}
