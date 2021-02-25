@@ -18,13 +18,8 @@ if (salarioBruto <= 1556.94) {
 }
 // /\ Se o salárioBruto for maior que 5189.82, a aliquotaINSS vai ficar UNDEFINED, aí definimos o desconto direto como R$ 570,88
 
-// else {
-//   Errado: aliquotaINSS = 11 / 100;
-//   // porem alíquota máxima de R$ 570,88
-// }
-
 let descontoINSS = aliquotaINSS ? salarioBruto * aliquotaINSS : 570.88;
-// Errado: if (descontoINSS > 570.88) descontoINSS = 570.88;
+
 let salarioBase = salarioBruto - descontoINSS;
 console.log("Salário Base: ", salarioBase);
 
