@@ -4,6 +4,7 @@ let n = 5;
 
 for (let index = 1; index <= n; index += 1) {
   let row = "";
+
   for (let indexColumn = 1; indexColumn <= index; indexColumn += 1) {
     row += "*";
   }
