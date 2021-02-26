@@ -11,4 +11,4 @@ for (let index = 1; index < numbers.length; index++) {
   }
 }
 
-console.log(numbers);
+console.log("Ascending ordered numbers: ", numbers);
