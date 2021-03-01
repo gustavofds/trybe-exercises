@@ -1,35 +1,56 @@
 //4- Depois, faça uma pirâmide com n asteriscos de base:
 /*
 n = 3
- *     (1 espaço + 1 asterisco)
-***    (0 espaços + 3 asteriscos)
+ *     (1 space + 1 asterisk)
+***    (0 spaces + 3 asterisks)
 
 n = 5
-  *    (2 espaços + 1 asterisco)
- ***   (1 espaço  + 3 asteriscos)
-*****  (0 espaços + 5 asteriscos)
+  *    (2 spaces + 1 asterisk)
+ ***   (1 space  + 3 asterisks)
+*****  (0 spaces + 5 asterisks)
 
 n = 7
-   *     (3 espaços + 1 asterisco)
-  ***    (2 espaços + 3 asterisco)
- *****   (1 espaço + 5 asterisco)
-*******  (0 espaços + 7 asterisco)
+   *     (3 spaces + 1 asterisk)
+  ***    (2 spaces + 3 asterisk)
+ *****   (1 space + 5 asterisk)
+*******  (0 spaces + 7 asterisk)
 
 n = 9
-    *      (4 espaços + 1 asterisco)
-   ***     (3 espaços + 3 asterisco)
-  *****    (2 espaços + 5 asterisco)
- *******   (1 espaços + 7 asterisco)
-*********  (0 espaços + 9 asterisco)
+    *      (4 spaces + 1 asterisk)
+   ***     (3 spaces + 3 asterisk)
+  *****    (2 spaces + 5 asterisk)
+ *******   (1 spaces + 7 asterisk)
+*********  (0 spaces + 9 asterisk)
 
-Nº de rows === Nº de números ímpares descendo até o 1
+Number of rows === Nº of odd numbers descending down to 1
 Math.ceil(n/2)
 
-Nº máximo de espaços(1ª row) === Math.trunc(n/2)
+Max number of spaces (1ª row) === Math.trunc(n/2)
 
-Espaços descendem 1 a 1 até chegar em 0 na última row
+Number of spaces descend 1 to 1 until it reaches 0 in the last row.
  */
 
-console.log("  *");
-console.log(" ***");
-console.log("*****");
+// n should be > 1 and an odd number
+const n = 11;
+
+const numberRows = Math.ceil(n / 2);
+const maxSpaces = Math.trunc(n / 2);
+console.log("numberRows: ", numberRows);
+console.log("maxSpaces: ", maxSpaces);
+
+// Max spaces string
+let spacesRow = "";
+for (let indexSpaces = maxSpaces; indexSpaces >= 0; indexSpaces -= 1) {
+  spacesRow += " ";
+}
+
+for (let index = 1; index <= n; index += 2) {
+  let row = "";
+
+  for (let indexAsterisks = 1; indexAsterisks <= index; indexAsterisks += 1) {
+    row += "*";
+  }
+
+  spacesRow = spacesRow.replace(spacesRow[spacesRow.length - 1], "");
+  console.log(spacesRow + row);
+}
