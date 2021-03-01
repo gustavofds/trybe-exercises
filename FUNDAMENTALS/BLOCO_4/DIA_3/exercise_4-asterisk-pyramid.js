@@ -22,20 +22,15 @@ n = 9
  *******   (1 spaces + 7 asterisk)
 *********  (0 spaces + 9 asterisk)
 
-Number of rows === Nº of odd numbers descending down to 1
-Math.ceil(n/2)
-
 Max number of spaces (1ª row) === Math.trunc(n/2)
 
 Number of spaces descend 1 to 1 until it reaches 0 in the last row.
  */
 
 // n should be > 1 and an odd number
-const n = 11;
+const n = 5;
 
-const numberRows = Math.ceil(n / 2);
 const maxSpaces = Math.trunc(n / 2);
-console.log("numberRows: ", numberRows);
 console.log("maxSpaces: ", maxSpaces);
 
 // Max spaces string
