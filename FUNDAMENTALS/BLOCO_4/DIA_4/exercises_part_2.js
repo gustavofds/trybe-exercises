@@ -90,3 +90,20 @@ function sumToNumber(number) {
 }
 
 console.log(sumToNumber(5));
+
+// Exercise 7
+function verifyEndOfWord(word, ending) {
+  // ending.length sould always be < word.lenth
+  let lengthDiff = word.length - ending.length;
+
+  for (let index = ending.length - 1; index >= 0; index -= 1) {
+    if (ending[index] !== word[index + lengthDiff]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(verifyEndOfWord("trybe", "be"));
+console.log(verifyEndOfWord("joaofernando", "fernan"));
