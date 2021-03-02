@@ -1,5 +1,4 @@
 // Exercise 1
-
 function isPalindrome(word) {
   for (let index = 0; index < word.length; index += 1) {
     if (word[index] !== word[word.length - 1 - index]) {
@@ -16,7 +15,6 @@ console.log(isPalindrome("renner"));
 console.log(isPalindrome("gustavg"));
 
 // Exercise 2
-
 function higherIndex(arrNumbers) {
   let higherIndex = 0;
 
@@ -33,7 +31,6 @@ console.log(higherIndex([2, 3, 6, 7, 10, 1]));
 console.log(higherIndex([2, 3, 6, 555, 7, 10]));
 
 // Exercise 3
-
 function lowerIndex(arrNumbers) {
   let lowerIndex = 0;
 
@@ -64,3 +61,20 @@ const largestName = function (arrNames) {
 console.log(
   largestName(["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"])
 );
+
+// Exercise 5
+function mostRepeatedNumber(arrNumbers) {
+  let auxArray = [];
+
+  for (let index = 0; index < arrNumbers.length; index += 1) {
+    const numbersFiltered = arrNumbers.filter(
+      (number) => number === arrNumbers[index]
+    );
+
+    if (numbersFiltered.length > auxArray.length) auxArray = numbersFiltered;
+  }
+
+  return auxArray[0];
+}
+
+console.log(mostRepeatedNumber([2, 3, 2, 5, 8, 2, 3]));
