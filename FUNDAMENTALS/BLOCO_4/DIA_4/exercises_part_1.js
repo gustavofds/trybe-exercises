@@ -1,3 +1,5 @@
+console.log("---------- Exercício 1 ----------");
+
 let info = {
   personagem: "Margarida",
   origem: "Pato Donald",
@@ -6,20 +8,24 @@ let info = {
 
 console.log(`Bem-vinda, ${info.personagem}`);
 
+console.log("---------- Exercício 2 ----------");
+
 info.recorrente = "Sim";
 console.log(info);
+
+console.log("---------- Exercício 3 ----------");
 
 for (let key in info) {
   console.log(key);
 }
 
-console.log("--------------------");
+console.log("---------- Exercício 4 ----------");
 
 for (let key in info) {
   console.log(info[key]);
 }
 
-console.log("--------------------");
+console.log("---------- Exercício 5 ----------");
 
 let info2 = {
   personagem: "Tio Patinhas",
@@ -31,9 +37,9 @@ let info2 = {
 console.log(info2);
 
 for (let key in info) {
-  if (info[key] !== info2[key]) {
-    console.log(info[key] + " e " + info2[key]);
-  } else {
+  if (key === "recorrente" && info[key] === "Sim" && info2[key] === "Sim") {
     console.log(`Ambos ${key}s`);
+  } else {
+    console.log(info[key] + " e " + info2[key]);
   }
 }
