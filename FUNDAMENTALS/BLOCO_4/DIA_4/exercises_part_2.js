@@ -47,3 +47,20 @@ function lowerIndex(arrNumbers) {
 }
 
 console.log(lowerIndex([2, 4, 6, 7, 10, 0, -3]));
+
+// Exercise 4
+const largestName = function (arrNames) {
+  let largestName = arrNames[0];
+
+  for (let index = 0; index < arrNames.length; index += 1) {
+    if (arrNames[index].length > largestName.length) {
+      largestName = arrNames[index];
+    }
+  }
+
+  return largestName;
+};
+
+console.log(
+  largestName(["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"])
+);
