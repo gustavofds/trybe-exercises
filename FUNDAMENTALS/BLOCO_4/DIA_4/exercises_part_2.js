@@ -78,3 +78,15 @@ function mostRepeatedNumber(arrNumbers) {
 }
 
 console.log(mostRepeatedNumber([2, 3, 2, 5, 8, 2, 3]));
+
+// Exercise 6
+function sumToNumber(number) {
+  let sum = 0;
+  for (let index = 1; index <= number; index += 1) {
+    sum += index;
+  }
+
+  return sum;
+}
+
+console.log(sumToNumber(5));
