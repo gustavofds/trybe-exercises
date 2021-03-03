@@ -11,11 +11,10 @@ n = 7
 const n = 7;
 
 const maxSpaces = Math.trunc(n / 2);
-console.log("maxSpaces: ", maxSpaces);
 
 // Max spaces string
 let spacesRow = "";
-for (let indexSpaces = maxSpaces; indexSpaces >= 0; indexSpaces -= 1) {
+for (let indexSpaces = maxSpaces; indexSpaces > 0; indexSpaces -= 1) {
   spacesRow += " ";
 }
 
@@ -30,6 +29,7 @@ for (let index = 1; index <= n; index += 2) {
     }
   }
 
-  spacesRow = spacesRow.replace(spacesRow[spacesRow.length - 1], "");
   console.log(spacesRow + row);
+
+  spacesRow = spacesRow.replace(spacesRow[spacesRow.length - 1], "");
 }
