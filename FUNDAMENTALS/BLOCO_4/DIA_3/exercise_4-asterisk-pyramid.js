@@ -31,7 +31,6 @@ Number of spaces descend 1 to 1 until it reaches 0 in the last row.
 const n = 5;
 
 const maxSpaces = Math.trunc(n / 2);
-console.log("maxSpaces: ", maxSpaces);
 
 // Max spaces string
 let spacesRow = "";
