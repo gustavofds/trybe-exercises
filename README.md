@@ -1,6 +1,6 @@
 # Trybe exercises
 
-This repository contains all exercises developed by the Web Development student Gustavo Sousa at [Trybe](https://www.betrybe.com/).
+This repository contains all exercises developed by the Web Development student [Gustavo Sousa](https://www.linkedin.com/in/gustavosousa1/) at [Trybe](https://www.betrybe.com/).
 
 Trybe is a web development school that has a genuine commitment to the
 professional success of its students. With the Shared Success Model, those who study
@@ -10,36 +10,48 @@ There are more than 1500 hours of training that covers fundamentals of web
 development, development, Front-end, Back-end, computer science, software
 engineering, agile methodologies and soft skills.
 
-## Course content
+## Course content (_in Portuguese_)
 
-## I - Web Development Fundamentals
+## I - Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
-##### 1: Introduction - Unix & Shell
+##### Bloco 1: Introdução - Unix & Shell
 
-- [x] 1-3: _Unix & Bash - Part 1_
-- [x] 1-4: _Unix & Bash - Part 2_
-- [x] 1-5: _Shell Script_
+- [X] 1-3: _Unix & Bash - Part 1_
+- [X] 1-4: _Unix & Bash - Part 2_
+- [X] 1-5: _Shell Script_
 
-##### 2: Git & GitHub
+##### Bloco 2: Git & GitHub
 
-- [x] 2-1: _What is it and what is it for?_
-- [x] 2-2: _Understanding commands_
-- [x] 2-3: _The Internet - Understanding how it works_
+- [X] 2-1: _O que é e para quê serve?_
+- [X] 2-2: _Entendendo os comandos_
+- [X] 2-3: _Internet - Entendendo como ela funciona_
 
-##### 3: Introduction - HTML & CSS
+##### Bloco 3: Introdução - HTML & CSS
 
-- [x] 3-1: _HTML & CSS - Page structures_
-- [x] 3-2: _HTML & CSS - CSS first steps_
-- [x] 3-3: _HTML & CSS - Selectors and positioning_
-- [x] 3-4: _Semantic HTML_
-- [x] 3-5: _[Project - Lessons Learned](https://github.com/tryber/sd-010-a-project-lessons-learned/pull/45)_
+- [X] 3-1: _HTML & CSS - Estruturas de página_
+- [X] 3-2: _HTML & CSS - Primeiros passos em CSS_
+- [X] 3-3: _HTML & CSS - Seletores e posicionamento_
+- [X] 3-4: _HTML Semântico_
+- [X] 3-5: _[Projeto - Lessons Learned](https://github.com/tryber/sd-010-a-project-lessons-learned/pull/45)_
 
-##### 4: Introduction- JavaScript
+##### Bloco 4: Introdução - JavaScript e Lógica de Programação
 
-- [x] 4-1: _JavaScript - First steps_
-- [x] 4-2: _JavaScript - Array and loop For_
-- [x] 4-3: _JavaScript - Programming logic and Algorithms_
-- [x] 4-4: _JavaScript - Objects and Functions_
-- [x] 4-5: _[Project - Playground Functions](https://github.com/tryber/sd-010-a-project-playground-functions/pull/79)_
+- [X] 4-1: _JavaScript - Primeiros passos_
+- [X] 4-2: _JavaScript - Array e loop For_
+- [X] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
+- [X] 4-4: _JavaScript - Objetos e Funções_
+- [X] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-010-a-project-playground-functions/pull/79)_
+
+##### Bloco 5: Introdução - JavaScript: DOM, Eventos e Web Storage
+
+- [X] 5-1: _JavaScript - DOM e seletores_
+- [ ] 5-2: _JavaScript - Trabalhando com elementos_
+- [ ] 5-3: _JavaScript - Eventos_
+- [ ] 5-4: _JavaScript - Web Storage_
+- [ ] 5-5: _[Projeto - Meme Generator]()_
+- [ ] 5-6: _[Projeto - Arte com Pixels]()_
+- [ ] 5-7: _[Projeto - Lista de tarefas]()_
+- [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
+- [ ] 5-7: _[Projeto - Carta Misteriosa]()_
 
 #### [...]
