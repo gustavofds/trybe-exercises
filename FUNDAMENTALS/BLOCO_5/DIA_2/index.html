@@ -57,15 +57,26 @@
   </head>
   <body>
     <script>
-      // Exercise 1
+      // 1
       const mainTitle = document.createElement("h1");
       mainTitle.innerText = "Exercício 5.2 - JavaScript DOM";
       document.body.appendChild(mainTitle);
 
-      // Exercise 2
+      // 2
       const mainContentDiv = document.createElement("div");
       mainContentDiv.className = "main-content";
       document.body.appendChild(mainContentDiv);
+
+      // 3
+      const centerContentDiv = document.createElement("div");
+      centerContentDiv.className = "center-content";
+      mainContentDiv.appendChild(centerContentDiv);
+
+      // 4
+      const firstParagraph = document.createElement("p");
+      firstParagraph.innerText =
+        "Parágrafo (do grego: paragraphos, 'escrever ao lado' ou 'escrito ao lado') é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular. Seu símbolo é §.";
+      centerContentDiv.appendChild(firstParagraph);
     </script>
   </body>
 </html>
