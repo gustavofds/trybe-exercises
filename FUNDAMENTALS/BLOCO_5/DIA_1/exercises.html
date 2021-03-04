@@ -51,14 +51,14 @@
       }
 
       // 2- Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-      function changeMainContentBackgroundColor(color) {
+      function changeMainColor(color) {
         document.getElementsByClassName(
           "main-content"
         )[0].style.backgroundColor = color;
       }
 
       // 3- Crie uma função que mude a cor do quadrado vermelho para branco.
-      function changeCenterContentColor(color) {
+      function changeCenterColor(color) {
         document.getElementsByClassName(
           "center-content"
         )[0].style.backgroundColor = color;
@@ -76,7 +76,7 @@
       }
 
       // 6- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-      function showPTag() {
+      function printPTag() {
         const pElements = document.getElementsByTagName("p");
 
         for (let index = 0; index < pElements.length; index += 1) {
@@ -87,11 +87,11 @@
       addTextP(
         "Daqui a dois anos me vejo empregado como um Desenvolvedor Web Junior já apto a ser promovido para Pleno e/ou com um negócio próprio com bom faturamento."
       );
-      changeMainContentBackgroundColor("rgb(76,164,109)");
-      changeCenterContentColor("white");
+      changeMainColor("rgb(76,164,109)");
+      changeCenterColor("white");
       changeH1Text("Exercício 5.1 - JavaScript");
       capitalizeP();
-      showPTag();
+      printPTag();
     </script>
   </body>
 </html>
