@@ -93,6 +93,16 @@
       mainImg.className = "small-image";
       mainImg.src = "https://picsum.photos/200";
       leftDiv.appendChild(mainImg);
+
+      // 8
+      const numbersList = document.createElement("ul");
+      rightDiv.appendChild(numbersList);
+
+      for (let index = 1; index <= 10; index += 1) {
+        let listItemNumber = document.createElement("li");
+        document.getElementsByTagName("ul")[0].appendChild(listItemNumber);
+        listItemNumber.innerText = index;
+      }
     </script>
   </body>
 </html>
