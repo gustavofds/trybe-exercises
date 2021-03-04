@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="p1">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="p1">Segundo parágrafo!</p>
+
+    <script>
+      let paragraph = document.querySelector("#paragraph");
+      paragraph.style.color = "red";
+
+      let mainTitle = document.querySelector("#page-title");
+      mainTitle.innerText = "The Godfather";
+
+      let secondParagraph = document.querySelector("#second-paragraph");
+      secondParagraph.innerText =
+        "Aprendendo DOM com a Trybe! Agora com query Selector";
+      secondParagraph.style.backgroundColor = "green";
+      secondParagraph.style.color = "white";
+      secondParagraph.style.padding = "15px";
+
+      document.getElementById("subtitle").innerText = "Dia 5.1";
+
+      document.querySelectorAll(".p1")[0].style.fontWeight = 900;
+      document.querySelectorAll(".p1")[0].style.color = "blue";
+
+      console.log(document.querySelectorAll("h4")[0].innerText.toUpperCase());
+    </script>
+  </body>
+</html>
