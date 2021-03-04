@@ -77,6 +77,22 @@
       firstParagraph.innerText =
         "Parágrafo (do grego: paragraphos, 'escrever ao lado' ou 'escrito ao lado') é uma unidade autossuficiente de um discurso, na escrita, que lida com um ponto de vista ou ideia particular. Seu símbolo é §.";
       centerContentDiv.appendChild(firstParagraph);
+
+      // 5
+      const leftDiv = document.createElement("div");
+      leftDiv.className = "left-content";
+      mainContentDiv.appendChild(leftDiv);
+
+      // 6
+      const rightDiv = document.createElement("div");
+      rightDiv.className = "right-content";
+      mainContentDiv.appendChild(rightDiv);
+
+      // 7
+      const mainImg = document.createElement("img");
+      mainImg.className = "small-image";
+      mainImg.src = "https://picsum.photos/200";
+      leftDiv.appendChild(mainImg);
     </script>
   </body>
 </html>
