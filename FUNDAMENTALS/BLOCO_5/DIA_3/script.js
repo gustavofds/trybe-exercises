@@ -87,7 +87,7 @@ function createDays() {
 function createHolidaysButton(btnName = "Feriados") {
   const holidayBtn = document.createElement("button");
   holidayBtn.id = "btn-holiday";
-  holidayBtn.innerText = feriados;
+  holidayBtn.innerText = btnName;
 
   document.querySelector(".buttons-container").append(holidayBtn);
 }
