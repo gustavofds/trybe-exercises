@@ -84,7 +84,16 @@ function createDays() {
   }
 }
 
+function createHolidaysButton(btnName = "Feriados") {
+  const holidayBtn = document.createElement("button");
+  holidayBtn.id = "btn-holiday";
+  holidayBtn.innerText = feriados;
+
+  document.querySelector(".buttons-container").append(holidayBtn);
+}
+
 createDaysOfTheWeek();
 createDays();
+createHolidaysButton();
 
 // Escreva seu código abaixo.
