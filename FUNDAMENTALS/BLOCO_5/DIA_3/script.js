@@ -109,9 +109,19 @@ function changeHolidaysColor(color) {
   });
 }
 
+// 4
+function createFridaysButton(btnName = "Sexta-feira") {
+  const fridaysBtn = document.createElement("button");
+  fridaysBtn.id = "btn-friday";
+  fridaysBtn.innerText = btnName;
+
+  document.querySelector(".buttons-container").appendChild(fridaysBtn);
+}
+
 createDaysOfTheWeek();
 createDays();
 createHolidaysButton();
 changeHolidaysColor("rgb(183, 183, 164)");
+createFridaysButton();
 
 // Escreva seu código abaixo.
