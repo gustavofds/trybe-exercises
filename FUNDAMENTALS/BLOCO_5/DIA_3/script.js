@@ -80,7 +80,7 @@ function createDays() {
       dayListItem.className += " friday";
     }
 
-    daysList.append(dayListItem);
+    daysList.appendChild(dayListItem);
   }
 }
 
@@ -89,7 +89,7 @@ function createHolidaysButton(btnName = "Feriados") {
   holidayBtn.id = "btn-holiday";
   holidayBtn.innerText = btnName;
 
-  document.querySelector(".buttons-container").append(holidayBtn);
+  document.querySelector(".buttons-container").appendChild(holidayBtn);
 }
 
 createDaysOfTheWeek();
