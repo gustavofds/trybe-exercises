@@ -74,9 +74,10 @@ function createDays() {
     }
 
     if (
-      dayListItem.innerHTML.includes(4) ||
+      dayListItem.innerHTML === "4" ||
       dayListItem.innerHTML.includes(11) ||
-      dayListItem.innerHTML.includes(18)
+      dayListItem.innerHTML.includes(18) ||
+      dayListItem.innerHTML.includes(25)
     ) {
       dayListItem.className += " friday";
     }
@@ -118,10 +119,22 @@ function createFridaysButton(btnName = "Sexta-feira") {
   document.querySelector(".buttons-container").appendChild(fridaysBtn);
 }
 
+// 5
+function changeFridaysText(text) {
+  const fridays = document.querySelectorAll(".friday");
+
+  document.getElementById("btn-friday").addEventListener("click", function () {
+    for (let friday of fridays) {
+      friday.innerText = text;
+    }
+  });
+}
+
 createDaysOfTheWeek();
 createDays();
 createHolidaysButton();
 changeHolidaysColor("rgb(183, 183, 164)");
 createFridaysButton();
+changeFridaysText("SEXTA!!!");
 
 // Escreva seu código abaixo.
