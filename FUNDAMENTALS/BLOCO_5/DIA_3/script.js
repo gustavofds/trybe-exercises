@@ -19,6 +19,7 @@ function createDaysOfTheWeek() {
   }
 }
 
+// 1
 function createDays() {
   const dezDaysList = [
     29,
@@ -84,6 +85,7 @@ function createDays() {
   }
 }
 
+// 2
 function createHolidaysButton(btnName = "Feriados") {
   const holidayBtn = document.createElement("button");
   holidayBtn.id = "btn-holiday";
@@ -92,8 +94,24 @@ function createHolidaysButton(btnName = "Feriados") {
   document.querySelector(".buttons-container").appendChild(holidayBtn);
 }
 
+// 3
+function changeHolidaysColor(color) {
+  const holidays = document.querySelectorAll(".holiday");
+
+  document.getElementById("btn-holiday").addEventListener("click", function () {
+    for (let holiday of holidays) {
+      if (holiday.style.backgroundColor === color) {
+        holiday.style.backgroundColor = "rgb(238,238,238)";
+      } else {
+        holiday.style.backgroundColor = color;
+      }
+    }
+  });
+}
+
 createDaysOfTheWeek();
 createDays();
 createHolidaysButton();
+changeHolidaysColor("rgb(183, 183, 164)");
 
 // Escreva seu código abaixo.
