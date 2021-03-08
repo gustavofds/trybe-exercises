@@ -174,6 +174,19 @@ function addSubtitle(color) {
   
 }
 
+// 9
+function selectTask() {
+  const taskDivs = document.querySelectorAll('.task');
+  taskDivs.forEach(taskDiv => taskDiv.addEventListener('click', function() {
+    if (taskDiv.className.includes('selected')) {
+      taskDiv.className = 'task';
+    } else {
+      taskDiv.className = 'task selected';
+    }
+  }))
+}
+
+
 createDaysOfTheWeek();
 createDays();
 createHolidaysButton();
@@ -184,5 +197,6 @@ zoomIn();
 zoomOut();
 addTask('Cozinhar');
 addSubtitle('red');
+selectTask();
 
 
