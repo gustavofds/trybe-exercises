@@ -212,7 +212,9 @@ zoomIn();
 zoomOut();
 addTask('Cozinhar');
 addTaskDiv('red');
-selectTask();
 colorTaskDay();
+addTask('Projeto');
+addTaskDiv('green');
+selectTask();
 
 
