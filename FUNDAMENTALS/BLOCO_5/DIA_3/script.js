@@ -191,7 +191,7 @@ function colorTaskDay() {
   daysList.addEventListener('click', function(event) {
     console.log(event.target);
     const selectedColor = document.querySelector('.selected').style.backgroundColor;    
-    if(!event.target.style.color || event.target.style.color === 'rgb(119, 119, 119)') {
+    if(!event.target.style.color || event.target.style.color !== selectedColor) {
       event.target.style.color = selectedColor;
       
     } else {
