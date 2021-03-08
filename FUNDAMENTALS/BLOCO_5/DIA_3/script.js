@@ -160,13 +160,12 @@ function zoomOut() {
 // 7
 function addTask(task) {
   const taskSpan = document.createElement('span');
-  taskSpan.innerText = task;
-  console.log(taskSpan);
+  taskSpan.innerText = task;  
   document.querySelector('.my-tasks').appendChild(taskSpan);
 }
 
 // 8
-function addSubtitle(color) {
+function addTaskDiv(color) {
   const colorDiv = document.createElement('div');
   colorDiv.style.backgroundColor = color;
   colorDiv.className = 'task';
@@ -183,8 +182,24 @@ function selectTask() {
     } else {
       taskDiv.className = 'task selected';
     }
-  }))
+  }))  
 }
+
+// 10
+function colorTaskDay() {
+  const daysList = document.getElementById('days');
+  daysList.addEventListener('click', function(event) {
+    console.log(event.target);
+    const selectedColor = document.querySelector('.selected').style.backgroundColor;    
+    if(!event.target.style.color || event.target.style.color === 'rgb(119, 119, 119)') {
+      event.target.style.color = selectedColor;
+      
+    } else {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+}
+
 
 
 createDaysOfTheWeek();
@@ -196,7 +211,8 @@ changeFridaysText("SEXTA!!!");
 zoomIn();
 zoomOut();
 addTask('Cozinhar');
-addSubtitle('red');
+addTaskDiv('red');
 selectTask();
+colorTaskDay();
 
 
