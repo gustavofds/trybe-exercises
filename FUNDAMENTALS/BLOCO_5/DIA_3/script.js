@@ -140,29 +140,22 @@ function changeFridaysText(text) {
 
 // 6
 function zoomIn() {
-  const daysOfMonthLi = document.querySelectorAll('.day')
+  const days = document.getElementById('days');
 
-  for (const day of daysOfMonthLi) {
-    day.addEventListener('mouseover', function(e) {
-      console.log(e);
-      day.style.fontSize = '30px';
-      day.style.fontWeight = 'bolder';
-    })
-  }
-  
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = 'bolder';
+
+  });  
 }
 
 function zoomOut() {
-  const daysOfMonthLi = document.querySelectorAll('.day')
+  const days = document.getElementById('days');
 
-  for (const day of daysOfMonthLi) {
-    day.addEventListener('mouseout', function(e) {
-      console.log(e);
-      day.style.fontSize = '20px';
-      day.style.fontWeight = 'normal';
-    })
-  }
-  
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = 'normal';
+  });
 }
 
 createDaysOfTheWeek();
