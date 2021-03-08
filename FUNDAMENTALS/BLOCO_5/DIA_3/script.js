@@ -179,8 +179,10 @@ function selectTask() {
   taskDivs.forEach(taskDiv => taskDiv.addEventListener('click', function() {
     if (taskDiv.className.includes('selected')) {
       taskDiv.className = 'task';
+      taskDiv.innerText = '';
     } else {
       taskDiv.className = 'task selected';
+      taskDiv.innerText = 'S';
     }
   }))  
 }
