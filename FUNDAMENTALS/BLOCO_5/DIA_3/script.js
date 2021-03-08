@@ -138,11 +138,39 @@ function changeFridaysText(text) {
   });
 }
 
+// 6
+function zoomIn() {
+  const daysOfMonthLi = document.querySelectorAll('.day')
+
+  for (const day of daysOfMonthLi) {
+    day.addEventListener('mouseover', function(e) {
+      console.log(e);
+      day.style.fontSize = '30px';
+      day.style.fontWeight = 'bolder';
+    })
+  }
+  
+}
+
+function zoomOut() {
+  const daysOfMonthLi = document.querySelectorAll('.day')
+
+  for (const day of daysOfMonthLi) {
+    day.addEventListener('mouseout', function(e) {
+      console.log(e);
+      day.style.fontSize = '20px';
+      day.style.fontWeight = 'normal';
+    })
+  }
+  
+}
+
 createDaysOfTheWeek();
 createDays();
 createHolidaysButton();
 changeHolidaysColor("rgb(183, 183, 164)");
 createFridaysButton();
 changeFridaysText("SEXTA!!!");
-
+zoomIn()
+zoomOut()
 // Escreva seu código abaixo.
