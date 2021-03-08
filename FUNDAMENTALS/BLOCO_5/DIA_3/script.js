@@ -145,7 +145,6 @@ function zoomIn() {
   days.addEventListener('mouseover', function(event) {
     event.target.style.fontSize = '30px';
     event.target.style.fontWeight = 'bolder';
-
   });  
 }
 
@@ -158,12 +157,22 @@ function zoomOut() {
   });
 }
 
+// 7
+function addTask(task) {
+  const taskSpan = document.createElement('span');
+  taskSpan.innerText = task;
+  console.log(taskSpan);
+  document.querySelector('.my-tasks').appendChild(taskSpan);
+}
+
 createDaysOfTheWeek();
 createDays();
 createHolidaysButton();
 changeHolidaysColor("rgb(183, 183, 164)");
 createFridaysButton();
 changeFridaysText("SEXTA!!!");
-zoomIn()
-zoomOut()
-// Escreva seu código abaixo.
+zoomIn();
+zoomOut();
+addTask('cozinhar');
+
+
