@@ -122,15 +122,15 @@ function createFridaysButton(btnName = "Sexta-feira") {
 // 5
 function changeFridaysText(text) {
   const fridays = document.querySelectorAll(".friday");
-  const innerTexts = [];
+  const fridayDays = [];
   for (let index = 0; index < fridays.length; index += 1) {
-    innerTexts.push(fridays[index].innerText);
+    fridayDays.push(fridays[index].innerText);
   }
 
   document.getElementById("btn-friday").addEventListener("click", function () {
     for (let index = 0; index < fridays.length; index += 1) {
       if (fridays[index].innerText === text) {
-        fridays[index].innerText = innerTexts[index];
+        fridays[index].innerText = fridayDays[index];
       } else {
         fridays[index].innerText = text;
       }
