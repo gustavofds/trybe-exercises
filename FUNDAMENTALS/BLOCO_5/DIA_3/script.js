@@ -165,6 +165,15 @@ function addTask(task) {
   document.querySelector('.my-tasks').appendChild(taskSpan);
 }
 
+// 8
+function addSubtitle(color) {
+  const colorDiv = document.createElement('div');
+  colorDiv.style.backgroundColor = color;
+  colorDiv.className = 'task';
+  document.querySelector('.my-tasks').appendChild(colorDiv);
+  
+}
+
 createDaysOfTheWeek();
 createDays();
 createHolidaysButton();
@@ -173,6 +182,7 @@ createFridaysButton();
 changeFridaysText("SEXTA!!!");
 zoomIn();
 zoomOut();
-addTask('cozinhar');
+addTask('Cozinhar');
+addSubtitle('red');
 
 
