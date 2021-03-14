@@ -1,3 +1,6 @@
+const taskInput = document.getElementById('task-input');
+const addTaskBtn = document.getElementById('btn-add');
+
 function createDaysOfTheWeek() {
   const weekDays = [
     "Domingo",
@@ -202,6 +205,19 @@ function colorTaskDay() {
   });
 }
 
+function addTaskItem(e) {
+  e.preventDefault();
+  console.log(e);
+  if (!taskInput.value) {
+    alert('Erro! Digite uma tarefa.');
+  } else {
+    const taskItem = document.createElement('li');
+    taskItem.innerText = taskInput.value;
+    document.querySelector('.task-list').appendChild(taskItem);
+    taskInput.value = '';
+  }
+}
+
 
 
 createDaysOfTheWeek();
@@ -218,5 +234,6 @@ colorTaskDay();
 addTask('Projeto');
 addTaskDiv('green');
 selectTask();
+addTaskBtn.addEventListener('click', addTaskItem);
 
 
