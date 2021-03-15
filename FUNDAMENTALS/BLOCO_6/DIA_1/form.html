@@ -45,7 +45,27 @@
             <input checked type="radio" name="residence-type" value="h" id="residence-type-1" required><label for="residence-type-1">Casa</label>
             <input type="radio" name="residence-type" value="a" id="residence-type-2" required><label for="residence-type-2">Apartamento</label>
           </div>
+          <button type="submit">Enviar</button>
         </fieldset>        
+      </div>
+    </form>
+    <form action="" method="GET">
+      <div class="form-row">
+        <fieldset>
+          <legend>Último Emprego</legend>
+          <div class="form-line">
+            <label for="resume-abstract">Resumo do Currículo</label>
+            <textarea name="resume-abstract" id="resume-abstract" cols="70" rows="10" placeholder="Digite o resumo do seu currículo." maxlength="1000" required></textarea>
+          </div>
+          <div class="form-line">
+            <label for="job-position">Cargo</label>
+            <input type="text" name="job" maxlength="40" id="job-position" required>
+          </div>
+          <div class="form-line">
+            <label for="job-description">Descrição do Cargo</label>
+            <input type="text" name="job" maxlength="500" id="job-description" required>
+          </div>
+        </fieldset>
       </div>
     </form>
   </main>

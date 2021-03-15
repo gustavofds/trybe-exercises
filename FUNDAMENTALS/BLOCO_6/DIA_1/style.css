@@ -12,6 +12,6 @@ fieldset {
   padding: 10px;
 }
 
-.form-line {
+.form-row , .form-line {
   margin-bottom: 10px;
 }
