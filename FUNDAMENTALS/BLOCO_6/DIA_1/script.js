@@ -28,11 +28,11 @@ const statesOfBrazil = [
   { 'SP': 'São Paulo' },
   { 'SE': 'Sergipe' },
   { 'TO': 'Tocantins' },
-]
+];
 
-for (let index = 0; index < statesOfBrazil.length; index += 1) {
-  const optionValue = Object.keys(statesOfBrazil[index])[0];  
-  const optionText = statesOfBrazil[index][optionValue];  
+for (let index = 0; index < statesOfBrazil.length; index += 1) {  
+  const optionValue = Object.entries(statesOfBrazil[index])[0][0];  
+  const optionText = Object.entries(statesOfBrazil[index])[0][1];  
   const optionTag = document.createElement('option');
   optionTag.innerText = optionText;
   optionTag.setAttribute('value', optionValue);
