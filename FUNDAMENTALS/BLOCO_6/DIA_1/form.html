@@ -22,7 +22,7 @@
           </div>
           <div class="form-line">
             <label for="email">E-mail</label>
-            <input type="email" name="email-address" maxlength="50" id="email" required>
+            <input type="text" name="email-address" maxlength="50" id="email" required>
           </div>
           <div class="form-line">
             <label for="cpf">CPF</label>
@@ -44,12 +44,9 @@
             <label>Tipo de Residência</label>
             <input checked type="radio" name="residence-type" value="ho" id="residence-type-1" required><label for="residence-type-1">Casa</label>
             <input type="radio" name="residence-type" value="ap" id="residence-type-2" required><label for="residence-type-2">Apartamento</label>
-          </div>
-          <button type="submit">Enviar</button>
+          </div>          
         </fieldset>        
-      </div>
-    </form>
-    <form action="" method="GET">
+      </div>    
       <div class="form-row">
         <fieldset>
           <legend>Último Emprego</legend>
@@ -65,9 +62,15 @@
             <label for="job-description">Descrição do Cargo</label>
             <input type="text" name="job" maxlength="500" id="job-description" required>
           </div>
-        </fieldset>
+          <div class="form-line">
+            <label for="date">Data</label>
+            <input type="text" name="date" id="date" required>
+          </div>
+        </fieldset>        
       </div>
-    </form>
+      <button type="submit" id="submit-btn">Enviar</button>
+      <button id="clear-btn">Limpar</button>
+    </form>    
   </main>
   <script src="script.js"></script>
 </body>

@@ -1,4 +1,6 @@
 const selectDropdown = document.getElementById('state');
+const emailInput = document.getElementById('email');
+const dateInput = document.getElementById('date');
 
 const statesOfBrazil = [
   { 'AC': 'Acre' },
@@ -30,11 +32,25 @@ const statesOfBrazil = [
   { 'TO': 'Tocantins' },
 ];
 
-for (let index = 0; index < statesOfBrazil.length; index += 1) {  
-  const optionValue = Object.entries(statesOfBrazil[index])[0][0];  
-  const optionText = Object.entries(statesOfBrazil[index])[0][1];  
-  const optionTag = document.createElement('option');
-  optionTag.innerText = optionText;
-  optionTag.setAttribute('value', optionValue);
-  selectDropdown.appendChild(optionTag);
+function isEmailValid() {
+  if (emailInput.value.includes('@')) {
+    return true;
+  }
+
+  return false;
+}
+
+function createStateOptions() {
+  for (let index = 0; index < statesOfBrazil.length; index += 1) {  
+    const optionValue = Object.entries(statesOfBrazil[index])[0][0];  
+    const optionText = Object.entries(statesOfBrazil[index])[0][1];  
+    const optionTag = document.createElement('option');
+    optionTag.innerText = optionText;
+    optionTag.setAttribute('value', optionValue);
+    selectDropdown.appendChild(optionTag);
+  }
+}
+
+window.onload = function() {
+  createStateOptions();
 }
