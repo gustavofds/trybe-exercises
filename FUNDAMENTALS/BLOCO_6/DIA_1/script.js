@@ -98,6 +98,27 @@ function isDateValid() {
   return true;
 }
 
+function createDiv() {
+  const resumeDiv = document.createElement('div');
+
+}
+
+function submission(e) {
+  e.preventDefault(); // Retirar se utilizarmos GET ou Post
+
+  if (!isEmailValid()) {
+    // e.preventDefault();
+    alert('E-mail Inválido ❌');
+  } else if (!isDateValid()) {
+    // e.preventDefault();
+    alert('Data Inválida ❌ Utilize o formato DD/MM/AAAA');
+  } else {
+    createDiv();
+  }
+}
+
 window.onload = function() {
   createStateOptions();
 }
+
+submitBtn.addEventListener('click', submission);
