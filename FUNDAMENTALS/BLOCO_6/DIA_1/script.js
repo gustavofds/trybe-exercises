@@ -51,6 +51,54 @@ function createStateOptions() {
   }
 }
 
+function checkDay(day) {
+  if (Number(day) <= 0 || Number(day) > 31 || isNaN(Number(day))) {
+    alert('Dia inválido!')
+    return false;
+  }
+  return true;  
+}
+
+function checkMonth(month) {
+  if (Number(month) <= 0 || Number(month) > 12 || isNaN(Number(month))) {
+    alert('Mês inválido!')
+    return false;
+  }
+  return true;
+}
+
+function checkYear(year) {
+  if (year.length !== 4 || Number(year) > 2021 || isNaN(Number(year))) {
+    alert('Ano inválido!')
+    return false;
+  }
+  return true;
+}
+
+function isDateValid() {
+  if (!dateInput.value.includes('/')) {
+    return false;
+  }
+
+  const splicedInput = dateInput.value.split('/');
+  if (splicedInput.length !== 3) {
+    return false;
+  }
+
+  const daySpliced = splicedInput[0];
+  const monthSpliced = splicedInput[1];
+  const yearSpliced = splicedInput[2];
+
+  checkDay(daySpliced);
+
+  checkMonth(monthSpliced);
+
+  checkYear(yearSpliced);
+
+  console.log(daySpliced,monthSpliced,  yearSpliced);
+  return true;
+}
+
 window.onload = function() {
   createStateOptions();
 }
