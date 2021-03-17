@@ -1,6 +1,8 @@
 const selectDropdown = document.getElementById('state');
 const emailInput = document.getElementById('email');
 const dateInput = document.getElementById('date');
+const submitBtn = document.getElementById('submit-btn');
+const clearBtn = document.getElementById('clear-btn');
 
 const statesOfBrazil = [
   { 'AC': 'Acre' },
@@ -88,12 +90,9 @@ function isDateValid() {
   const daySpliced = splicedInput[0];
   const monthSpliced = splicedInput[1];
   const yearSpliced = splicedInput[2];
-
-  checkDay(daySpliced);
-
-  checkMonth(monthSpliced);
-
-  checkYear(yearSpliced);
+  if(!checkDay(daySpliced)) return false;
+  if(!checkMonth(monthSpliced)) return false;
+  if(!checkYear(yearSpliced)) return false;
 
   console.log(daySpliced,monthSpliced,  yearSpliced);
   return true;
