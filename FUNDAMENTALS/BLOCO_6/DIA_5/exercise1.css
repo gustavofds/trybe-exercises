@@ -1,5 +1,5 @@
 body {
-
+  box-sizing: border-box;
 }
 h1 {
 
@@ -34,5 +34,23 @@ figure {
 @media screen and (min-width: 376px) {
   body {
     background-color: red;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 40px;
+  }  
+
+  .figures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  figure {
+    padding: 0 20px;
+    flex-basis: 35%;    
+  }
+
+  figure > img {
+    max-width: 250px;
   }
 }
