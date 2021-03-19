@@ -55,7 +55,7 @@ figure {
   }
 }
 
-@media screen and (min-width: 890px) {
+@media screen and (min-width: 976px) {
   body {
     background-color: dodgerblue;
     font-size: 18px;
