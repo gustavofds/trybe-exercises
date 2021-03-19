@@ -16,18 +16,23 @@ figure {
     margin: 0;
 }
 
-@media screen and (max-width: 375px) {
+body {
+  font-size: 25px;
+  line-height: 35px;
+  margin: 0 25px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+figure {
+  margin-bottom: 30px;
+}
+
+
+@media screen and (min-width: 376px) {
   body {
-    font-size: 25px;
-    line-height: 35px;
-    margin: 0 25px;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  figure {
-    margin-bottom: 30px;
+    background-color: red;
   }
 }
