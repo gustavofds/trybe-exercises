@@ -54,3 +54,21 @@ figure {
     max-width: 250px;
   }
 }
+
+@media screen and (min-width: 890px) {
+  body {
+    background-color: dodgerblue;
+    font-size: 18px;
+    margin: 20 60px;
+    max-width: 1200px;
+  }
+
+  figure {
+    padding: 0 20px;
+    flex-basis: 40%;    
+  }
+
+  figure > img {
+    max-width: 400px;
+  }
+}
