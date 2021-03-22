@@ -130,8 +130,18 @@ function submission(e) {
   }
 }
 
+function clearForm(e) {
+  e.preventDefault;
+  const inputValues = inputFields.map(el => document.getElementById(el).value = '');
+  const resumeDiv = document.getElementById('resume');
+  if(resumeDiv) {
+    resumeDiv.innerHTML = '';
+  }
+}
+
 window.onload = function() {
   createStateOptions();
 }
 
 submitBtn.addEventListener('click', submission);
+clearBtn.addEventListener('click', clearForm);
