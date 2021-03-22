@@ -3,6 +3,8 @@ const emailInput = document.getElementById('email');
 const dateInput = document.getElementById('date');
 const submitBtn = document.getElementById('submit-btn');
 const clearBtn = document.getElementById('clear-btn');
+const mainSection = document.getElementsByTagName('main')[0];
+const inputFields = ['name',  'email',  'cpf', 'address', 'city', 'state',  'resume-abstract', 'job-position', 'job-description', 'date'];
 
 const statesOfBrazil = [
   { 'AC': 'Acre' },
@@ -101,6 +103,17 @@ function isDateValid() {
 function createDiv() {
   const resumeDiv = document.createElement('div');
 
+}
+
+function createDiv() {
+  const resumeDiv = document.createElement('div');
+  resumeDiv.id = 'resume';
+  
+  const inputValues = inputFields.map(el => document.getElementById(el).value);
+
+  inputValues.forEach(data => resumeDiv.innerHTML += `${data}<br>`)  
+  
+  mainSection.appendChild(resumeDiv);
 }
 
 function submission(e) {
