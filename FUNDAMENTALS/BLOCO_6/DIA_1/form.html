@@ -1,77 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Meu Currículo</title>
-</head>
-<body>
-  <header>
-    <h1>Formulário de Currículo</h1>
-  </header>
-  <main>
-    <form action="" method="GET">
-      <div class="form-row">        
-        <fieldset>
-          <legend>Dados Pessoais</legend>
-          <div class="form-line">
-            <label for="name">Nome</label>
-            <input type="text" name="full-name" maxlength="40" id="name" required>
-          </div>
-          <div class="form-line">
-            <label for="email">E-mail</label>
-            <input type="text" name="email-address" maxlength="50" id="email" required>
-          </div>
-          <div class="form-line">
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf-number" maxlength="11" id="cpf" required>
-          </div>
-          <div class="form-line">
-            <label for="address">Endereço</label>
-            <input type="text" name="full-address" maxlength="200" id="address" required>
-          </div>
-          <div class="form-line">
-            <label for="city">Cidade</label>
-            <input type="text" name="city" maxlength="28" id="city" required>
-          </div>
-          <div class="form-line">
-            <label for="state">Estado</label>
-            <select name="state" id="state" required></select>
-          </div>
-          <div class="form-line">
-            <label>Tipo de Residência</label>
-            <input checked type="radio" name="residence-type" value="ho" id="residence-type-1" required><label for="residence-type-1">Casa</label>
-            <input type="radio" name="residence-type" value="ap" id="residence-type-2" required><label for="residence-type-2">Apartamento</label>
-          </div>          
-        </fieldset>        
-      </div>    
-      <div class="form-row">
-        <fieldset>
-          <legend>Último Emprego</legend>
-          <div class="form-line">
-            <label for="resume-abstract">Resumo do Currículo</label>
-            <textarea name="resume-abstract" id="resume-abstract" cols="70" rows="10" placeholder="Digite o resumo do seu currículo." maxlength="1000" required></textarea>
-          </div>
-          <div class="form-line">
-            <label for="job-position">Cargo</label>
-            <input type="text" name="job" maxlength="40" id="job-position" required>
-          </div>
-          <div class="form-line">
-            <label for="job-description">Descrição do Cargo</label>
-            <input type="text" name="job" maxlength="500" id="job-description" required>
-          </div>
-          <div class="form-line">
-            <label for="date">Data</label>
-            <input type="text" name="date" id="date" required>
-          </div>
-        </fieldset>        
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Meu Currículo</title>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <header>
+          <h1 class="title">Formulário de Currículo</h1>
+        </header>
+        <main>
+          <form action="" method="GET">
+            <div class="form-row">
+              <fieldset>
+                <legend class="subtitle">Dados Pessoais</legend>
+                <div class="form-line">
+                  <label for="name">Nome</label>
+                  <input
+                    type="text"
+                    name="full-name"
+                    maxlength="40"
+                    id="name"
+                    required
+                  />
+                </div>
+                <div class="form-line">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="text"
+                    name="email-address"
+                    maxlength="50"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="form-line">
+                  <label for="cpf">CPF</label>
+                  <input
+                    type="text"
+                    name="cpf-number"
+                    maxlength="11"
+                    id="cpf"
+                    required
+                  />
+                </div>
+                <div class="form-line">
+                  <label for="address">Endereço</label>
+                  <input
+                    type="text"
+                    name="full-address"
+                    maxlength="200"
+                    id="address"
+                    required
+                  />
+                </div>
+                <div class="form-line">
+                  <label for="city">Cidade</label>
+                  <input
+                    type="text"
+                    name="city"
+                    maxlength="28"
+                    id="city"
+                    required
+                  />
+                </div>
+                <div class="form-line">
+                  <label for="state">Estado</label>
+                  <select name="state" id="state" required></select>
+                </div>
+                <div class="form-line">
+                  <label>Tipo de Residência</label>
+                  <input
+                    checked
+                    type="radio"
+                    name="residence-type"
+                    value="ho"
+                    id="residence-type-1"
+                    required
+                  /><label for="residence-type-1">Casa</label>
+                  <input
+                    type="radio"
+                    name="residence-type"
+                    value="ap"
+                    id="residence-type-2"
+                    required
+                  /><label for="residence-type-2">Apartamento</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-row">
+              <fieldset>
+                <legend class="subtitle">Último Emprego</legend>
+                <div class="form-line">
+                  <label for="resume-abstract">Resumo do Currículo</label>
+                  <textarea
+                    name="resume-abstract"
+                    id="resume-abstract"
+                    cols="70"
+                    rows="10"
+                    placeholder="Digite o resumo do seu currículo."
+                    maxlength="1000"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-line">
+                  <label for="job-position">Cargo</label>
+                  <input
+                    type="text"
+                    name="job"
+                    maxlength="40"
+                    id="job-position"
+                    required
+                  />
+                </div>
+                <div class="form-line">
+                  <label for="job-description">Descrição do Cargo</label>
+                  <input
+                    type="text"
+                    name="job"
+                    maxlength="500"
+                    id="job-description"
+                    required
+                  />
+                </div>
+                <div class="form-line">
+                  <label for="date">Data</label>
+                  <input type="text" name="date" id="date" required />
+                </div>
+              </fieldset>
+            </div>
+            <button type="submit" id="submit-btn">Enviar</button>
+            <button id="clear-btn">Limpar</button>
+          </form>
+        </main>
       </div>
-      <button type="submit" id="submit-btn">Enviar</button>
-      <button id="clear-btn">Limpar</button>
-    </form>    
-  </main>
-  <script src="script.js"></script>
-</body>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
