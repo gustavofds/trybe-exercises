@@ -26,4 +26,16 @@ const longestWord = phrase => {
   return longest;
 }
 
-console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu")) // retorna 'aconteceu'
+console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu")); // retorna 'aconteceu'
+
+// 3
+const btn = document.getElementById('btn-1');
+const span = document.getElementById('span-1');
+let clickCount = 0;
+
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  clickCount += 1;
+  span.innerHTML = clickCount;
+})
+
