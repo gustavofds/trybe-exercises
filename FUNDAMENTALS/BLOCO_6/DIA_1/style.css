@@ -2,9 +2,24 @@ body {
   background-color: #90e0ef;
 }
 
+.navbar {
+  background-color: #03045e;
+  padding: 20px;
+  /* width: 100%; */
+}
+
+.navbar > h1 {
+  color: white;
+}
+
 .textarea {
   max-width: 80%;
   min-width: 80%;
+}
+
+.section-bottom1 {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* * {
