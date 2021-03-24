@@ -33,9 +33,22 @@ const btn = document.getElementById('btn-1');
 const span = document.getElementById('span-1');
 let clickCount = 0;
 
-btn.addEventListener('click', (e) => {
-  e.preventDefault();
+btn.addEventListener('click', () => {  
   clickCount += 1;
   span.innerHTML = clickCount;
 })
 
+// 4
+const replaceX = (baseStr, str) => baseStr.split('x').join(str); 
+
+function buildSkillsPhrase(name, skills) { 
+  let skillsStr = '';
+  skills.forEach(skill => skillsStr += `- ${skill};
+  `)
+
+  return `${replaceX('Tryber x aqui!', name)} Minhas cinco principais habilidades são:
+  ${skillsStr}
+  #goTrybe`;  
+}
+
+console.log(buildSkillsPhrase('Ricciardo',['JavaScript', 'HTML', 'CSS', 'GitHub', 'Bash']));
