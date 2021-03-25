@@ -37,3 +37,7 @@ function listKeys(obj) {
 }
 
 console.log(listKeys(lesson3));
+
+// 3
+const objectSize = obj => Object.keys(obj).length;
+console.log(objectSize(lesson1));
