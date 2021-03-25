@@ -27,3 +27,13 @@ function addTurn(obj, newKey, value) {
 }
 
 console.log(addTurn(lesson2, 'turno', 'manhã'));
+
+// 2
+function listKeys(obj) {
+  const keys = Object.keys(obj)  
+  keys.forEach(key => console.log(key));
+   
+   return keys;  
+}
+
+console.log(listKeys(lesson3));
