@@ -89,3 +89,38 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
+
+// BÔNUS 1
+/*
+{
+  lesson1:
+   { materia: 'Matemática',
+     numeroEstudantes: 20,
+     professor: 'Maria Clara',
+     turno: 'manhã' },
+  lesson2:
+   { materia: 'História',
+     numeroEstudantes: 20,
+     professor: 'Carlos',
+     turno: 'noite' },
+  lesson3:
+   { materia: 'Matemática',
+     numeroEstudantes: 10,
+     professor: 'Maria Clara',
+     turno: 'noite' }
+};
+*/
+console.log('--------------------------------------');
+const countStudents = (obj, classSubject) => {
+  const lessons = Object.keys(obj);
+  let students = 0;
+
+  for (const lesson of lessons) {    
+    if (obj[lesson].materia === classSubject) {
+      students += obj[lesson].numeroEstudantes;
+    }
+  }
+  return students;
+};
+
+console.log(countStudents(allLessons, 'Matemática'));
