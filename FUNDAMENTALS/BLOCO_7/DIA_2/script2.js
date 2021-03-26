@@ -110,7 +110,6 @@ console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
      turno: 'noite' }
 };
 */
-console.log('--------------------------------------');
 const countStudents = (obj, classSubject) => {
   const lessons = Object.keys(obj);
   let students = 0;
@@ -124,3 +123,25 @@ const countStudents = (obj, classSubject) => {
 };
 
 console.log(countStudents(allLessons, 'Matemática'));
+
+// BÔNUS 2
+const createReport = (obj, teacherName) => {
+  const lessons = Object.keys(obj);
+  let classes = [];
+  let students = 0;
+
+  for (const lesson of lessons) {    
+    if (obj[lesson].professor === teacherName) {
+      students += obj[lesson].numeroEstudantes;
+      classes.push(obj[lesson].materia)
+    }
+  }
+
+  return {
+    professor: teacherName,
+    aulas: classes,
+    estudantes: students,
+  }
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
