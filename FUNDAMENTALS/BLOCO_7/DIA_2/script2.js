@@ -72,3 +72,20 @@ const getValueByNumber = (obj, index) => {
 
 console.log('getValueFromPosition: ', getValueByNumber(lesson1, 0));
 // Output: 'Matématica'
+
+// 8
+const verifyPair = (obj, key, value) => {
+  const pairs = Object.entries(obj);
+  for (const pair of pairs) {
+    if(pair.includes(key) && obj[key] === value) {      
+      return true;
+    }
+  }
+  return false;
+}
+
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
