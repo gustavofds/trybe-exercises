@@ -16,9 +16,9 @@ const fetchPromise = () => {
   })
     .then((response) => {
       const sumArr = [2, 3, 5, 10].map((number) => response / number);
-      console.log(sumArr);
+      console.log(response, sumArr);
     })
-    .catch((err) => console.log('Promise rejeitada'));
+    .catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
 }
 
 fetchPromise();
