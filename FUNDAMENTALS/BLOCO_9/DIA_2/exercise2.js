@@ -9,12 +9,15 @@ const fetchPromise = () => {
       randomNumbers.push(randomNumber());
     }
     const randomNumbersSqrSum = randomNumbers.map((number) => number ** 2)
-      .reduce((acc, cur) => acc + cur, 0);
+      .reduce((acc, cur) => acc + cur, 0);  
 
-    if (randomNumbersSqrSum < 8000) return resolve();
+    if (randomNumbersSqrSum < 8000) return resolve(randomNumbersSqrSum);
     reject();
   })
-    .then((response) => console.log('Promise resolvida'))
+    .then((response) => {
+      const sumArr = [2, 3, 5, 10].map((number) => response / number);
+      console.log(sumArr);
+    })
     .catch((err) => console.log('Promise rejeitada'));
 }
 
