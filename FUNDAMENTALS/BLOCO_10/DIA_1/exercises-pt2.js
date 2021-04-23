@@ -54,9 +54,24 @@ function techList(techs, name) {
   return techs.sort().map((tech) => ({ tech, name }));
 }
 
+function hydrate(drinks) {
+  // let glassesOfWater = 0;
+  const glassesOfWater = drinks
+    .replace(/ /g, '')
+    .split('')
+    .filter((character) => !Number.isNaN(Number(character)))
+    .reduce((acc, num) => Number(acc) + Number(num));
+
+  // for (let number of numbers) {
+  //   glassesOfWater += Number(number);
+  // }
+
+  return `${glassesOfWater} copo${glassesOfWater > 1 ? 's' : ''} de água`;
+}
 
 module.exports = {
   encode,
   decode,
   techList,
+  hydrate,
 };
