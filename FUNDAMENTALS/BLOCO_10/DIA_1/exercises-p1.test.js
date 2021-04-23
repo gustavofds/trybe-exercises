@@ -1,4 +1,9 @@
-const { sum, myRemove, myRemoveWithoutCopy } = require('./exercises-pt1');
+const { 
+  sum, 
+  myRemove, 
+  myRemoveWithoutCopy,
+  myFizzBuzz
+ } = require('./exercises-pt1');
 
 describe('Exercicio 1 - testa sum', () => {
   test('Testa se sum 4 + 5 é igual a 9', () => {
@@ -55,6 +60,28 @@ describe('Exercicio 3 - testa myRemoveWithoutCopy', () => {
 
   it('Verifica se retorna o array esperado', () => {    
     expect(myRemoveWithoutCopy([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
+  });
+})
+
+describe('Testa funcao myFizzBuzz', () => {
+  test('Verifica se retorna fizzbuzz', () => {
+    expect(myFizzBuzz(15)).toBe('fizzbuzz');
+  });
+
+  test('Verifica se retorna fizz (div por 3)', () => {
+    expect(myFizzBuzz(9)).toBe('fizz');
+  });
+
+  test('Verifica se retorna buzz (div por 5)', () => {
+    expect(myFizzBuzz(10)).toBe('buzz');
+  });
+
+  test('Verifica se retorna o proprio numero', () => {
+    expect(myFizzBuzz(11)).toBe(11);
+  });
+
+  test('Verifica se retorna falso', () => {
+    expect(myFizzBuzz('abacate')).toBe(false);
   });
 })
 
