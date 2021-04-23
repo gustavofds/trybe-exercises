@@ -40,7 +40,23 @@ function decode(str) {
   return decodedArr.join('');
 }
 
+function techList(techs, name) {
+  // const resultArr = [];
+
+  if (techs.length === 0) return 'Vazio!';
+
+  // for (let tech in techs.sort()) {
+  //   if (techs[tech]) {
+  //     resultArr.push({ tech: techs[tech], name });
+  //   }
+  // }
+
+  return techs.sort().map((tech) => ({ tech, name }));
+}
+
+
 module.exports = {
   encode,
   decode,
+  techList,
 };
