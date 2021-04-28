@@ -7,9 +7,9 @@ function App() {
       <header className="App-header">
         <h1>My Pokedex</h1>        
       </header>
-      <body>
+      <div>
         <Pokedex />
-      </body>
+      </div>
     </div>
   );
 }
