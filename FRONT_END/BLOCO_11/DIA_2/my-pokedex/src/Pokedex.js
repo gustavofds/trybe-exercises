@@ -1,6 +1,7 @@
 import React from 'react';
 import data from './data.js'
 import Pokemon from './Pokemon.js';
+import './Pokedex.css';
 
 class Pokedex extends React.Component {
   render() {

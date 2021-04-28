@@ -1,3 +1,5 @@
+import './Pokemon.css';
+
 function Pokemon(props) {
   return (
     <li>
