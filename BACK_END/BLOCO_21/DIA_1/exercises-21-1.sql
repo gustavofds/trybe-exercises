@@ -1,0 +1,15 @@
+-- 1
+SELECT MAX(SALARY)
+FROM hr.employees;
+
+-- 2
+SELECT MAX(SALARY) - MIN(SALARY) AS 'Salary Diff'
+FROM hr.employees;
+
+-- 3
+SELECT JOB_ID, AVG(SALARY)
+FROM hr.employees
+GROUP BY JOB_ID
+ORDER BY AVG(SALARY) DESC;
+
+-- 4
