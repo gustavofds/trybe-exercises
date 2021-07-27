@@ -24,3 +24,10 @@ FROM Pixar.Theater AS T
 LEFT JOIN Pixar.Movies AS M
 ON M.theater_id = T.id
 ORDER BY T.name;
+
+-- 5
+SELECT T.*, M.*
+FROM Pixar.Theater AS T
+RIGHT JOIN Pixar.Movies AS M
+ON M.theater_id = T.id
+ORDER BY T.name;
