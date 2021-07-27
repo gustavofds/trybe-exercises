@@ -43,3 +43,16 @@ SELECT M.title FROM Pixar.Movies AS M
 INNER JOIN Pixar.BoxOffice AS BO
 ON BO.movie_id = M.id
 WHERE BO.rating > 7.5;
+
+-- 7
+SELECT rating FROM Pixar.BoxOffice
+WHERE movie_id IN (
+	SELECT id FROM Pixar.Movies
+    WHERE `year` > 2009
+);
+
+SELECT BO.rating
+FROM Pixar.BoxOffice AS BO
+INNER JOIN Pixar.Movies AS M
+ON M.id = BO.movie_id
+WHERE M.year > 2009;
