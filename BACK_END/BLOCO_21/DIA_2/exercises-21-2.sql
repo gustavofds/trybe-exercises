@@ -56,3 +56,21 @@ FROM Pixar.BoxOffice AS BO
 INNER JOIN Pixar.Movies AS M
 ON M.id = BO.movie_id
 WHERE M.year > 2009;
+
+-- 8
+SELECT name, location
+FROM Pixar.Theater AS T
+WHERE EXISTS (
+	SELECT theater_id
+    FROM Pixar.Movies
+    WHERE theater_id = T.id
+);
+
+-- 9
+SELECT name, location
+FROM Pixar.Theater AS T
+WHERE NOT EXISTS (
+	SELECT theater_id
+    FROM Pixar.Movies
+    WHERE theater_id = T.id
+);
