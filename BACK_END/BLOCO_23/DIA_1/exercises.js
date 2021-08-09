@@ -16,4 +16,12 @@ db.bios.find().limit(3).pretty();
 // 6
 db.bios.find().limit(2).skip(5);
 
+/*
+Mongoimport for exercises 7 to 10:
+mongoimport --db=sample --collection=books --file=Desktop/books.json
+*/
 // 7
+db.books.count();
+
+// 8
+db.books.find({ status: "PUBLISH" }).count()
