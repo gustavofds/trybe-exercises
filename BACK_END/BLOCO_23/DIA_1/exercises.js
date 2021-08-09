@@ -25,3 +25,4 @@ db.books.count();
 
 // 8
 db.books.find({ status: "PUBLISH" }).count()
+// or: db.books.count({ status: "PUBLISH" })
