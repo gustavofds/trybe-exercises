@@ -26,3 +26,9 @@ db.books.count();
 // 8
 db.books.find({ status: "PUBLISH" }).count()
 // or: db.books.count({ status: "PUBLISH" })
+
+// 9
+db.books.find({}, { title: 1, isbn: 1, pageCount: 1, _id: 0 }).limit(3);
+
+// 10
+db.books.find({ status: "MEAP" }, { title: 1, authors: 1, status: 1 }).limit(10).skip(5);
