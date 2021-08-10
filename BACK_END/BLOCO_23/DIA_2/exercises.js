@@ -22,3 +22,13 @@ db.superheroes.findOne();
 db.superheroes.find({ "aspects.height": { $lt: 180 } });
 
 // 3
+db.superheroes.count({ "aspects.height": { $lt: 180 } });
+
+// 4
+db.superheroes.count(     { "aspects.height": { $lte: 180 } } );
+
+// 5
+db.superheroes.findOne({ "aspects.height": { $gte: 200 }});
+
+// 6
+db.superheroes.count({ "aspects.height": { $gte: 200 }});
