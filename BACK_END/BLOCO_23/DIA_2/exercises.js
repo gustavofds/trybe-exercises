@@ -71,4 +71,16 @@ db.superheroes.find({
 	]
 });
 
+// 16
+db.superheroes.count({ race: { $exists: false } });
+
+// 17
+db.superheroes.count({ "aspects.hairColor": { $exists: 1 } });
+
+// 18
+db.superheroes.deleteOne({ "publisher": "Sony Pictures" });
+
+// 19
+db.superheroes.deleteMany({ "publisher": "George Lucas" });
+
 
