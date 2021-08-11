@@ -32,3 +32,15 @@ db.superheroes.findOne({ "aspects.height": { $gte: 200 }});
 
 // 6
 db.superheroes.count({ "aspects.height": { $gte: 200 }});
+
+// 7
+db.superheroes.find({ "aspects.eyeColor": "green" });
+
+// 8
+db.superheroes.count({ "aspects.eyeColor": "blue" });
+
+// 9
+db.superheroes.find({ "aspects.hairColor": { $in: ["black", "No Hair"] }  });
+
+// 10
+db.superheroes.count({ "aspects.hairColor": { $in: ["black", "No Hair"] }  });
