@@ -44,3 +44,12 @@ db.superheroes.find({ "aspects.hairColor": { $in: ["black", "No Hair"] }  });
 
 // 10
 db.superheroes.count({ "aspects.hairColor": { $in: ["black", "No Hair"] }  });
+
+// 11
+db.superheroes.count(     { "aspects.hairColor": { $nin: ["black", "No Hair"] } } );
+
+// 12
+db.superheroes.count({ "aspects.height": { $not: { $gt: 180 } } });
+
+// 13
+db.superheroes.find({ $or: [{ race: { $ne: 'Human' } }, { "aspects.height": { $not: { $gt: 180}  }}] });
