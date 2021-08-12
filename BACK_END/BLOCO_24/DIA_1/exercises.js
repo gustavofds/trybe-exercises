@@ -3,3 +3,21 @@ db.movies.updateOne({ title: "Batman" }, { $set: { imdbRating: 7.7 } } );
 
 // 2
 db.movies.updateOne({ title: "Godzilla" }, { $set: { budget: 1 }  });
+
+// 3
+db.movies.updateOne(
+  { title: "Home Alone" },
+  { $set: { budget: 15, imdbRating: 5.5 } }
+);
+
+// 4
+db.movies.updateOne(
+  { title: "Batman" },
+  { $inc: { imdbRating: 2 } }
+);
+
+// 5
+db.movies.updateOne(
+  { title: "Home Alone" },
+  { $inc: { budget: 5 }  }
+);
