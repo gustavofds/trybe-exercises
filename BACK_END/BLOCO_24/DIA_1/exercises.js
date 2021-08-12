@@ -21,3 +21,15 @@ db.movies.updateOne(
   { title: "Home Alone" },
   { $inc: { budget: 5 }  }
 );
+
+// 6
+db.movies.updateOne(
+  { title: "Batman" },
+  { $mul: { imdbRating: 4 } }
+);
+
+// 7
+db.movies.updateOne(
+  { title: "Batman" },
+  { $rename: { budget: "estimatedBudget" } }
+  );
