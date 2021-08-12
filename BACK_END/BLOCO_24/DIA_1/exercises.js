@@ -57,3 +57,15 @@ db.movies.updateOne(
     },
   },
 );
+
+// 11
+db.movies.updateMany({}, { $set: { sequels: 0 } });
+
+// 12
+db.movies.updateMany({}, { $unset: { budget: "", estimatedBudget: "" } });
+
+// 13
+db.movies.updateMany(
+  { title: { $in: ["Batman", "Home Alone"] } },
+  { $max: { imdbRating: 17 }}
+);
