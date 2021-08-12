@@ -47,5 +47,13 @@ db.movies.updateOne(
     $max: { imdbRating: 8.6 },
     $set: { "category.1" : "thriller" }
   }
-)
+);
 
+// 10
+db.movies.updateOne(
+  { title: "Home Alone" },
+  { $currentDate: {
+      lastUpdated: { $type: "timestamp" }
+    },
+  },
+);
