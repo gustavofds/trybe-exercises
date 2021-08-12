@@ -33,3 +33,9 @@ db.movies.updateOne(
   { title: "Batman" },
   { $rename: { budget: "estimatedBudget" } }
   );
+
+// 8
+db.movies.updateOne(
+  { title: "Home Alone" },
+  { $min: { budget: 5 }}
+);
