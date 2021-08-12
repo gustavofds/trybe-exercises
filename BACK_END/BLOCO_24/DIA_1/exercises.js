@@ -39,3 +39,13 @@ db.movies.updateOne(
   { title: "Home Alone" },
   { $min: { budget: 5 }}
 );
+
+// 9
+db.movies.updateOne(
+  { title: "Godzilla" },
+  {
+    $max: { imdbRating: 8.6 },
+    $set: { "category.1" : "thriller" }
+  }
+)
+
