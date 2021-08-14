@@ -25,3 +25,28 @@ db.xmen.updateMany(
     },
   }
 );
+
+// 16
+db.xmen.updateMany(
+  { 
+    $and: [
+      { class: { $in: ["omega", "gama"] } },
+      { power: { $lt: 500}}
+    ]
+  }, 
+  {
+    $currentDate: {
+      lastUpdate: { $type: "timestamp"  }
+    },
+    $set: { power: 500 }
+  }
+);
+
+  // other solution:
+db.xmen.updateMany(
+    { class: { $in: ["omega", "gama"] } },
+    {
+      $currentDate: { lastUpdate: { $type: "timestamp" } },
+      $max: { power: 500 },
+    },
+);
