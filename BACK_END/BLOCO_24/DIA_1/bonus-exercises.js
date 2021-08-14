@@ -61,3 +61,12 @@ db.xmen.updateMany(
     $min: { power: 300 },
   }
 );
+
+// 18
+db.xmen.updateMany(
+  { class: { $exists: false } },
+  {
+    $currentDate: { lastUpdate: { $type: "timestamp" } },
+    $inc: { power: -100 }
+  }
+);
