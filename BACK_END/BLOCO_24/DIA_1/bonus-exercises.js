@@ -50,3 +50,14 @@ db.xmen.updateMany(
       $max: { power: 500 },
     },
 );
+
+// 17
+db.xmen.updateMany(
+  { class: "gama" },
+  {
+    $currentDate: {
+      lastUpdate: { $type: "timestamp" },
+    },
+    $min: { power: 300 },
+  }
+);
