@@ -76,11 +76,23 @@ db.xmen.updateMany(
   {
     $or: [
       { occupation: "Senior Staff", power: { $gt: 100} },
-      { ocupation: "Junior Staff", power: { $gt: 200 }  }
+      { occupation: "Junior Staff", power: { $gt: 200 }  }
     ]
   },
   {
     $currentDate: { lastUpdate: { $type: "timestamp" } },
     $set: { areas: ["Students Room"]}
+  }
+);
+
+// 20
+db.xmen.updateMany(
+  {
+    occupation: "Junior Staff",
+    areas: { $exists: false }
+  },
+  {
+    $currentDate: { lastUpdate: { $type: "timestamp" } },
+    $set: { areas: ["Outside"]}
   }
 );
