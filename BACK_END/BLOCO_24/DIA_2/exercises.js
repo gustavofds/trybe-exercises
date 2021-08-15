@@ -33,3 +33,9 @@ db.movies.updateOne(
   { title: "Batman" },
   { $addToSet: { category: "action" } }
 );
+
+// 7
+db.movies.updateMany(
+  { title: { $in: ["Batman", "Home Alone"] } },
+  { $push: { category: "90's" } }
+);
