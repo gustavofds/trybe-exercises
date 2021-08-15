@@ -21,3 +21,9 @@ db.movies.updateOne(
   { title: "Batman" },
   { $pop: { category: -1 } }
 );
+
+// 5
+db.movies.updateOne(
+  { title: "Batman" },
+  { $pop: { category: 1 } }
+);
