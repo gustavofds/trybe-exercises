@@ -120,3 +120,14 @@ db.movies.updateOne(
     $set: { "cast.$.actor": [ "Heath Ledger" ] }
   }
 );
+
+// another solution:
+db.movies.updateOne(
+  {
+    title: "Batman",
+    "cast.character": "Batman",
+  },
+  {
+push: { "cast.$.actor": "Christian Bale" },
+  },
+);
