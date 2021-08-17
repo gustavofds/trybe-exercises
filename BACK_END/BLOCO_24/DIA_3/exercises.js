@@ -91,3 +91,12 @@ db.movies.find(
   },
   { title: 1, ratings: 1, category: 1, _id: 0 },
 );
+
+// 14
+db.movies.find(
+  {
+    ratings: { $size: 4 },
+    category: { $in: ["adventure", "family"]},
+    imdbRating: { $not: { $lt: 7 }},
+  },
+);
