@@ -36,3 +36,33 @@ db.movies.find(
   { ratings: { $elemMatch: { $gt: 103 } } },
   { title: 1, ratings: 1, _id: 0}
 );
+
+// 7
+db.movies.find(
+  { 
+    ratings: {
+      $elemMatch: {
+        $gte: 100,
+        $lte: 105,
+      },
+    },
+  },
+  { title: 1, ratings: 1, _id: 0 }
+);
+
+// 8
+db.movies.find(
+  { ratings: {
+    $elemMatch: { $gte: 64, $lte: 105, $mod: [9, 0]  } }
+  },
+  { title: 1, ratings: 1, _id: 0}
+);
+
+// 9
+db.movies.find(
+  {
+    ratings: { $elemMatch: { $gt: 103 } },
+    category: { $elemMatch: { $eq: "adventure"} }
+  },
+  { title: 1, ratings: 1, category: 1, _id: 0}
+);
