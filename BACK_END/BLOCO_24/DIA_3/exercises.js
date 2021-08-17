@@ -31,3 +31,8 @@ db.movies.updateOne(
   { $push: { ratings: { $each: [200, 99, 65] }}}
 );
 
+// 6
+db.movies.find(
+  { ratings: { $elemMatch: { $gt: 103 } } },
+  { title: 1, ratings: 1, _id: 0}
+);
