@@ -19,3 +19,15 @@ db.movies.updateOne(
   },
 )
 
+// 4
+db.movies.updateOne(
+  { title: "Godzilla" },
+  { $push: { ratings: { $each: [78, 52, 95, 102 ] }}}
+);
+
+// 5
+db.movies.updateOne(
+  { title: "Home Alone" },
+  { $push: { ratings: { $each: [200, 99, 65] }}}
+);
+
