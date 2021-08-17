@@ -130,3 +130,9 @@ db.movies.updateOne(
     },
   },
 );
+
+// 18
+db.movies.find({ description: { $regex: /^The/ }});
+
+// 19
+db.movies.find({ description: { $regex: /humanity.$/ }})
