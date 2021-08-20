@@ -40,3 +40,31 @@ db.clientes.aggregate([
 db.clientes.aggregate([
   { $group: { _id: "$sexo", total: { $sum: 1 } } },
 ]);
+
+// 6
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: { sexo: "$sexo", uf: "$endereco.uf" },
+      total: { $sum: 1 }
+    },
+  },
+]);
+
+// 7
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: { sexo: "$sexo", uf: "$endereco.uf" },
+      total: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0 ,
+      estado: "$_id.uf",
+      sexo: "$_id.sexo",
+      total: 1 
+    }
+  } 
+])
