@@ -1,4 +1,4 @@
-const PESO = 115;
+const PESO = 99;
 const ALTURA = 184;
 
 const calcImc = function (peso, altura) {
