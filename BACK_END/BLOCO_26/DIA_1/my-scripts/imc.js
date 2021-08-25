@@ -1,8 +1,5 @@
 const readline = require('readline-sync');
 
-const peso = readline.questionFloat('Qual seu peso? (em Kg): ');
-const altura = readline.questionFloat('Qual sua altura? (em cm): ');
-
 const calcImc = function (peso, altura) {
   const imc = peso / ((altura/100)**2);
 
@@ -18,7 +15,16 @@ const classificacaoImc = function (imc) {
   return 'Obesidade graus III e IV';
 }
 
-const imc = calcImc(peso, altura);
+function runCalcImc() {
+  const peso = readline.questionFloat('Qual seu peso? (em Kg): ');
+  const altura = readline.questionFloat('Qual sua altura? (em cm): ');
 
-console.log(`Seu IMC é ${imc}`);
-console.log(classificacaoImc(imc));
+  const imc = calcImc(peso, altura);
+
+  console.log(`Seu IMC é ${imc}`);
+  console.log(classificacaoImc(imc));
+}
+
+// runCalcImc();
+
+module.exports = runCalcImc;
