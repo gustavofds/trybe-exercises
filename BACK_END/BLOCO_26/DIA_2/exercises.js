@@ -12,14 +12,27 @@ function calcPromise(a, b, c) {
   });
 }
 
-calcPromise(18, 2, 3)
-  .then((res) => console.log(res))
-  .catch((err) => console.log(`🤯 Erro: ${err}`));
+// calcPromise(18, 2, 3)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(`🤯 Erro: ${err}`));
 
-calcPromise(4, 2, 3)
-  .then((res) => console.log(res))
-  .catch((err) => console.log(`🤯 Erro: ${err}`));
+// calcPromise(4, 2, 3)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(`🤯 Erro: ${err}`));
 
-calcPromise(18, 2, 'a')
-  .then((res) => console.log(res))
-  .catch((err) => console.log(`🤯 Erro: ${err}`));
+// calcPromise(18, 2, 'a')
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(`🤯 Erro: ${err}`));
+
+// 2 - Escreva um código para consumir a função construída no exercício anterior.
+const generateRandomNumber = () => Math.floor(Math.random() * 100 + 1);
+
+function consumeCalcPromise() {
+  const randomNumbers = [generateRandomNumber(), generateRandomNumber(), generateRandomNumber()];
+
+  calcPromise(...randomNumbers)
+    .then((result) => console.log(`Resultado: ${result}`))
+    .catch((err) => console.log(`🤯 Erro: ${err}`));
+}
+
+consumeCalcPromise();
