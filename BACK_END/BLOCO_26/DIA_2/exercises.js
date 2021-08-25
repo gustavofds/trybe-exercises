@@ -27,12 +27,28 @@ function calcPromise(a, b, c) {
 // 2 - Escreva um código para consumir a função construída no exercício anterior.
 const generateRandomNumber = () => Math.floor(Math.random() * 100 + 1);
 
+/*
 function consumeCalcPromise() {
   const randomNumbers = [generateRandomNumber(), generateRandomNumber(), generateRandomNumber()];
 
   calcPromise(...randomNumbers)
     .then((result) => console.log(`Resultado: ${result}`))
     .catch((err) => console.log(`🤯 Erro: ${err}`));
+}
+
+consumeCalcPromise();
+*/
+// 3
+
+async function consumeCalcPromise() {
+  const randomNumbers = Array.from({ length: 3 }).map(generateRandomNumber);
+
+  try {
+    const result = await calcPromise(...randomNumbers);
+    console.log(result);
+  } catch(err) {
+    console.log(err);
+  }
 }
 
 consumeCalcPromise();
