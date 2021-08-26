@@ -91,3 +91,22 @@ const addNelson = async function() {
 }
 
 // addNelson();
+
+const replaceNelson = async function() {
+  try {
+    const data = await fs.readFile('simpsonsFamily.json', 'utf-8');
+    const parsedData = JSON.parse(data);
+
+    const nelsonIndex = parsedData.findIndex((char) => char.name === 'Nelson Muntz');
+
+    parsedData[nelsonIndex].name = 'Maggie Simpson'; 
+
+    await fs.writeFile('simpsonsFamily.json', JSON.stringify(parsedData));
+
+    console.log('Data written to file');
+  } catch(err) {
+    throw err;
+  }
+}
+
+// replaceNelson();
