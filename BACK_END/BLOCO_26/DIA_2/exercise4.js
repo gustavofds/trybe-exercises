@@ -53,7 +53,20 @@ const removeCharacters = async function (...ids) {
 
   await fs.writeFile('simpsons.json', JSON.stringify(filteredDataByIds));
   console.log('Data written to file');
-
 }
 
 // removeCharacters(10, 6);
+
+const createSimpsonsFamily = async function() {
+  const data = await fs.readFile('simpsons.json', 'utf-8');
+  const parsedData = JSON.parse(data);
+
+  const familyIds = [1, 2, 3, 4];
+
+  const filteredDataByIds = parsedData.filter((char) => familyIds.includes(+char.id));
+
+  await fs.writeFile('simpsonsFamily.json', JSON.stringify(filteredDataByIds));
+  console.log('Data written to file');
+}
+
+createSimpsonsFamily();
