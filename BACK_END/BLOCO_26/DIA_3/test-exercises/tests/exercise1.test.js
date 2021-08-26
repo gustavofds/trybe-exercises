@@ -29,4 +29,14 @@ describe('Testa a função getNumberClassification', () => {
       expect(result).to.be.equals('neutro');
     });
   });
+
+  describe('Quando não recebe um número como argumento', () => {
+    it('Retorna uma string', () => {
+      expect(getNumberClassification('a')).to.be.a('string');
+    });
+
+    it('Lança um erro "o valor deve ser um número"', () => {
+      expect(getNumberClassification('a')).to.be.equals('o valor deve ser um número');
+    });
+  });
 });
