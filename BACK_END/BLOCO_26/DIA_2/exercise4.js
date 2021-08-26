@@ -69,4 +69,25 @@ const createSimpsonsFamily = async function() {
   console.log('Data written to file');
 }
 
-createSimpsonsFamily();
+// createSimpsonsFamily();
+
+// consumeCalcPromise();
+
+const addNelson = async function() {
+  try {
+    const data = await fs.readFile('simpsonsFamily.json', 'utf-8');
+    const parsedData = JSON.parse(data);
+
+    const lastId = +parsedData[parsedData.length - 1].id;
+
+    parsedData.push({ id: lastId + 1 + '', name: 'Nelson Muntz'});
+
+    await fs.writeFile('simpsonsFamily.json', JSON.stringify(parsedData));
+
+    console.log('Data written to file');
+  } catch(err) {
+    throw err;
+  }
+}
+
+// addNelson();
