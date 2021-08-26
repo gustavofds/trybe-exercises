@@ -25,21 +25,35 @@ const getSimpsonById = async function(id) {
   }
 };
 
-(async () => {
-  try {
-    const data = await getSimpsonById(3);
-    console.log(data);
-    // console.log(await getSimpsonById(33))
-  } catch(err) {
-    console.log(err);
-  }
-})(); 
+// (async () => {
+//   try {
+//     const data = await getSimpsonById(3);
+//     console.log(data);
+//     // console.log(await getSimpsonById(33))
+//   } catch(err) {
+//     console.log(err);
+//   }
+// })(); 
 
-(async () => {
-  try {
-    const data = await getSimpsonById(33);
-    console.log(data);
-  } catch(err) {
-    console.log('🤯 Error: ', err);  
-  }
-})(); 
+// (async () => {
+//   try {
+//     const data = await getSimpsonById(33);
+//     console.log(data);
+//   } catch(err) {
+//     console.log('🤯 Error: ', err);  
+//   }
+// })();
+
+// 4.3
+const removeCharacters = async function (...ids) {
+  const data = await fs.readFile('simpsons.json', 'utf-8');
+  const parsedData = JSON.parse(data);
+
+  const filteredDataByIds = parsedData.filter((char) => !ids.includes(+char.id));
+
+  await fs.writeFile('simpsons.json', JSON.stringify(filteredDataByIds));
+  console.log('Data written to file');
+
+}
+
+// removeCharacters(10, 6);
