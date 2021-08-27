@@ -33,6 +33,14 @@ app.get('/simpsons', (_req, res) => {
   res.status(200).json({ simpsonsQty: simpsons.length, simpsons });
 });
 
+app.get('/simpsons/:id', (req, res) => {
+  const { id } = req.params;
+  const simpson = simpsons.find((s) => s.id === id);
+
+  if (!simpson) return res.status(404).json({ message: 'simpson not found' });
+  res.status(200).json({ simpson });
+});
+
 app.listen(3000, () => {
   console.log('App running on port 3000!');
 })
