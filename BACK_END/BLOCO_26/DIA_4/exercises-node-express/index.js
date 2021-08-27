@@ -20,6 +20,11 @@ app.post('/greetings', (req, res) => {
   res.status(200).json({ message: `Hello, ${name}!`});
 });
 
+app.put('/users/:name/:age', (req, res) => {
+  const { name, age } = req.params;
+  res.status(200).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade` });
+});
+
 app.listen(3000, () => {
   console.log('App running on port 3000!');
 })
