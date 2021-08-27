@@ -41,6 +41,15 @@ app.get('/simpsons/:id', (req, res) => {
   res.status(200).json({ simpson });
 });
 
+app.post('/simpsons', async (req, res) => {
+  const { id, name } = req.body;
+
+  if (simpsons.some((s) => s.id === id)) return res.status(409).json({ message: 'id already exists' });
+  simpsons.push({ id, name});
+  await fs.promises.writeFile('simpsons.json', JSON.stringify(simpsons));
+  res.status(204).end();
+});
+
 app.listen(3000, () => {
   console.log('App running on port 3000!');
 })
