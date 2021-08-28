@@ -29,12 +29,23 @@ app.put('/users/:name/:age', (req, res) => {
 // Exercises 5~8
 const simpsons = JSON.parse(fs.readFileSync('simpsons.json', 'utf-8'));
 
+app.post('/signup', async (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+
+  if( !email || !password || !firstName || !phone) {
+    return res.status(401).json({ message: 'missing fields' });
+  }
+
+  const token = await generateToken();
+  res.status(200).json( { token });
+});
+
 app.use((req, res, next) => {
   const { authorization } = req.headers;
   if (!authorization || authorization.length !== 16) {
-    return res.status(401).json({ message: 'missing fields' });
+    return res.status(401).json({ message: 'Token inválido!' });
   }
-  
+
   next();
 });
 
