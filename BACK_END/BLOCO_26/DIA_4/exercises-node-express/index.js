@@ -1,6 +1,6 @@
 const express = require('express');
 const fs = require('fs');
-
+const generateToken = require('./utils');
 const app = express();
 
 app.use(express.json());
@@ -28,6 +28,15 @@ app.put('/users/:name/:age', (req, res) => {
 
 // Exercises 5~8
 const simpsons = JSON.parse(fs.readFileSync('simpsons.json', 'utf-8'));
+
+app.use((req, res, next) => {
+  const { authorization } = req.headers;
+  if (!authorization || authorization.length !== 16) {
+    return res.status(401).json({ message: 'missing fields' });
+  }
+  
+  next();
+});
 
 app.get('/simpsons', (_req, res) => {
   res.status(200).json({ simpsonsQty: simpsons.length, simpsons });
