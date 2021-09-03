@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const connection = require('./connection');
 
 const formatUser = ({ _id, firstName, lastName, email }) => ({ id: _id, firstName, lastName, email });
@@ -7,9 +8,19 @@ exports.getAllUsers = async () => {
 
   const users = await db.collection('users').find().toArray();
 
-  console.log(users);
-
   return users.map(formatUser);
+}
+
+exports.getUser = async (id) => {
+  if(!ObjectId.isValid(id)) return null;
+
+  const db = await connection();
+
+  const user = await db.collection('users').findOne({ _id: ObjectId(id) });
+
+  if(user) return formatUser(user);
+  
+  return null;
 }
 
 exports.createUser = async ({ firstName, lastName, email, password }) => {
