@@ -6,6 +6,12 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/user', async (_req, res) => {
+  const users = await User.getAllUsers();
+
+  res.status(200).json(users);
+});
+
 const verifyPassword = (req, res, next) => {
   const { password } = req.body;
 
