@@ -6,14 +6,20 @@ const OPTIONS = {
   useUnifiedTopology: true,
 }
 
-// let db = null;
+let db = null;
 
 const connection = () => {
-  // return db
-  //   ? Promise.resolve(db)
-  return mongodb.connect(MONGODB_URL, OPTIONS)
-    .then((conn) => conn.db('model_example'))
-    .catch((err) => console.log(err));
+  return db
+    ? Promise.resolve(db)
+    : mongodb.connect(MONGODB_URL, OPTIONS)
+    .then((conn) => {
+      db = conn.db('model_example');
+      return db;
+    })
+    .catch((err) => {
+      console.log(err);
+      process.exit(1);
+    });
 }
 
 module.exports = connection;
