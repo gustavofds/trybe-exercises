@@ -35,3 +35,24 @@ exports.createUser = async ({ firstName, lastName, email, password }) => {
     email,
   };
 };
+
+exports.updateUser = async ({ id, firstName, lastName, email, password }) => {
+  if(!ObjectId.isValid(id)) return null;
+
+  const db = await connection();
+  
+  const user = await db.collection('users').updateOne({ _id: ObjectId(id) }, { $set: { firstName, lastName, email, password }});
+
+  if (user.matchedCount === 0) return null;
+
+  if (user) {
+    return {
+      id,
+      firstName,
+      lastName,
+      email,
+    };
+  };
+
+  return null;
+};
