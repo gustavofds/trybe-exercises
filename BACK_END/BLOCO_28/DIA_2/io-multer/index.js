@@ -22,27 +22,17 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-/* __dirname + '/uploads' é o caminho da pasta que queremos expor publicamente */
-/* Isso quer dizer que, sempre que receber uma request, o express vai primeiro
-   verificar se o caminho da request é o nome de um arquivo que existe em `uploads`.
-   Se for, o express envia o conteúdo desse arquivo e encerra a response.
-   Caso contrário, ele chama `next` e permite que os demais endpoints funcionem */
-app.use(express.static(__dirname + '/uploads'));
-
-console.log(__dirname);
-
-/* Cria uma instância do`multer`configurada. O`multer`recebe um objeto que,
-   nesse caso, contém o destino do arquivo enviado. */
-const upload = multer({ dest: 'uploads' });
+app.use(express.static(__dirname + '/envios'));
 
 app.get('/ping', controllers.ping);
 
-app.post('/files/upload', upload.single('file'), (req, res) => {
+const multerUpload = multer({ dest: 'envios/' });
+
+app.post('/envios', multerUpload.single('file'), (req, res) => {
   res.status(200).json({ body: req.body, file: req.file });
 });
 
 app.use(middlewares.error);
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-});
+const port = PORT || 8000;
+app.listen(port, () => console.log(`App running on port ${port}`));
