@@ -29,11 +29,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
    Caso contrário, ele chama `next` e permite que os demais endpoints funcionem */
 app.use(express.static(__dirname + '/uploads'));
 
+console.log(__dirname);
+
 /* Cria uma instância do`multer`configurada. O`multer`recebe um objeto que,
    nesse caso, contém o destino do arquivo enviado. */
 const upload = multer({ dest: 'uploads' });
 
 app.get('/ping', controllers.ping);
+
+app.post('/files/upload', upload.single('file'), (req, res) => {
+  res.status(200).json({ body: req.body, file: req.file });
+});
 
 app.use(middlewares.error);
 
