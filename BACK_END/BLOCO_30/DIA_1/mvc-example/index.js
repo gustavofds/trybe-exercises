@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.get('/authors', authorController.listAuthors);
+app.get('/authors/:id', authorController.showAuthor);
 
 const PORT = process.env.PORT || 3000;
 
