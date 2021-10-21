@@ -1,19 +1,33 @@
 const net = require('net');
 
+let connectedClients = [];
+let clientId = 0;
+
 
 const server = net.createServer((connection) => {
   console.log('Cliente conectado');
+  clientId++;
+  connection.id = clientId;
 
-  connection.on('end', () => {
-    console.log('Cliente desconectado');
-  })
+  connection.write(`Bem vindo, cliente ${clientId}!`);
 
-  connection.write('Mensagem do servidor!\r\n');
-  connection.pipe(connection);
+  connectedClients.push(connection);
 
   connection.on('data', (data) => {
     console.log(`Message received from client: ${data.toString()}`);
-  })
+
+    connectedClients
+      .filter((client) => client.id !== connection.id)
+      .forEach((client) => client.write(data));
+  });
+ 
+
+  connection.on('end', () => {
+    console.log('Cliente desconectado');
+  });
+
+  // connection.write('Mensagem do servidor!\r\n');
+  // connection.pipe(connection);
 });
 
 server.on('connection', () => {
