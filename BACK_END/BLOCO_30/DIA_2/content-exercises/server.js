@@ -1,5 +1,6 @@
 const net = require('net');
 
+
 const server = net.createServer((connection) => {
   console.log('Cliente conectado');
 
@@ -9,6 +10,16 @@ const server = net.createServer((connection) => {
 
   connection.write('Mensagem do servidor!\r\n');
   connection.pipe(connection);
+
+  connection.on('data', (data) => {
+    console.log(`Message received from client: ${data.toString()}`);
+  })
+});
+
+server.on('connection', () => {
+  server.getConnections((err, count) => {
+    console.log(`Connections: ${count}`);
+  })
 });
 
 server.listen(8080, () => {
