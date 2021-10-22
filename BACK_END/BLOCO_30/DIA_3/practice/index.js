@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/chat', (req, res) => {
+  res.sendFile(__dirname + '/public/chat.html');
+});
+
 http.listen(3000, () => {
   console.log('Servidor ouvindo na porta 3000');
 });
