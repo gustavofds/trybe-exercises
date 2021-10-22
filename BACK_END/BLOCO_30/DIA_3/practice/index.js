@@ -3,6 +3,8 @@ const app = express();
 const http = require('http').createServer(app);
 const ping = require('./sockets/ping');
 
+app.use(express.static(__dirname + '/public'));
+
 const io = require('socket.io')(http, {
   cors: {
     origin: 'http://localhost:3000', // url aceita pelo cors
@@ -10,7 +12,6 @@ const io = require('socket.io')(http, {
   }});
 
 ping(io);
-
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
