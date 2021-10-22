@@ -8,5 +8,9 @@ module.exports = (io) => {
 
       io.emit('serverMessage', message);
     });
+
+    socket.on('disconnect', () => {
+      socket.broadcast.emit('serverMessage', `Xiii! ${socket.id} acabou de se desconectar :(`);
+    })
   }
 )};
